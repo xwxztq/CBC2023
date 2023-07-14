@@ -52,8 +52,8 @@ python test.py datas/in.lst datas/out.lst
 </summary>
 run.sh的作用是：
 
-    1. 登录对应的docker hub，使得第2步的拉去镜像部分有相关的权限
-    2. 拉取上传到docker hub的镜像到本地
+    1. 登录对应的docker hub，使得第2步的pull镜像部分时相关的权限
+    2. 拉取(pull)阿里云docker hub的镜像到本地
     3. 运行拉取到本地的docker镜像
         * `--gpus all`: 的作用是传入所有的GPU，在实际测试时数量目前未知，因为可能会根据测评压力调整
         * `--rm`: 在docker镜像运行后删除对应的container
