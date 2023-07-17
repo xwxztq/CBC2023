@@ -6,12 +6,10 @@
 ## 找到对应的容器版本
 
 访问 [nvidia提供的PyTorch Container](https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-23-06.html#rel-23-06)，找到匹配自己版本的容器。
-
-比如我这里是`PyTorch 2.0.0`, 可以在网站上看到对应的docker容器版本是23.05。
-
 根据自己的docker容器版本，更改Dockerfile中第一行的版本。
 
-> 将`FROM nvcr.io/nvidia/pytorch:21.02-py3` 更改为 `FROM nvcr.io/nvidia/pytorch:23.05-py3`
+>比如我这里是`PyTorch 2.0.0`, 可以在网站上看到对应的docker容器版本是23.05。
+> 所以将`FROM nvcr.io/nvidia/pytorch:21.02-py3` 更改为 `FROM nvcr.io/nvidia/pytorch:23.05-py3`
 
 ## 安装python导出库
     
