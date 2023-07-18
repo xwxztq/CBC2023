@@ -12,7 +12,7 @@
 
 ## Docker 构建
 
-不熟悉docker构建的参赛队伍可以参考 [Docker 构建链接](https://github.com/xwxztq/CBC2023/tree/main/docker),
+不熟悉docker构建的参赛队伍可以参考 [Docker 构建链接](https://github.com/xwxztq/CBC2023/tree/main/docker)
 
 
 
