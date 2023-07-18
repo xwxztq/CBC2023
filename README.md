@@ -16,9 +16,12 @@
 
 
 
+## 题目文档
+
+题目文档可以参考[该目录](https://github.com/xwxztq/CBC2023/tree/main/docs)
 
 ## Q&A
 
-遇到任何问题可以在issue中提出
+遇到任何问题欢迎大家在issue中提出
 
 
