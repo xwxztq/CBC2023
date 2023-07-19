@@ -11,7 +11,7 @@ def TMalign(path1, path2):
         return 0
 
 def main():
-    with open('astral-scopdom-seqres-gd-sel-gs-bib-40-1.75.fa') as f:
+    with open('astral-scopedom-seqres-gd-sel-gs-bib-40-2.08.fa') as f:
         lines = f.readlines() # read all clustered lines
     lines = [l[1:].split(' ')[:2] for l in lines if l.startswith(">")] # extract all superfamily and PDB id
     pairs = [(key[:-2], value) for (value, key) in lines] # rearrange to (key, value) pairs
@@ -30,14 +30,20 @@ def main():
         scores = []
         for o, spf in zip(ori_paths, spfs):
             score = 0
+            tmp = []
             o, spf = o.strip(), spf.strip()
             if spf in grouped_spf:
                 for p in grouped_spf[spf]:
-                    score = max(score, TMalign(o, p))
+                    tmp.append(TMalign(o, p))
 
+            score = max(tmp)
             print('Score for ', o, ' is ', score)
+            print("\t\t First 5 scores: ", end=' ')
+            for s in tmp[:5]:
+                print('\t', s, end=' ')
+            print()
             scores.append(score)
-        print('Average Score: ', sum(scores) / len(ori_paths))
+        print('\n\nAverage Score: ', sum(scores) / len(ori_paths))
 
 if __name__ == "__main__":
     main()
